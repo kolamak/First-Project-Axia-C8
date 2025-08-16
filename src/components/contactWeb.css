@@ -1,0 +1,28 @@
+button{
+    width: 300px;
+    height: fit-content;
+    border-radius: 0.5rem;
+    
+    color: #fff;
+    padding: 0.5rem 0.5rem;
+    justify-content: center;
+    background-color: #000;
+}  
+
+.phone_website{
+    width: 300px;
+    height: 80px;
+    color: white;
+    text-align: center;
+    
+    margin-top: 0.2rem;
+    border-radius: 0.5rem;
+    border: 2px solid bisque;
+    background-color: #3d3d55;
+}
+
+.web{
+    margin: 0;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+}
