@@ -1,13 +1,23 @@
+import './App.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import ContactWeb from './components/contactWeb'
-import './App.css'
+import Header from './components/header/header'
+import Footer from './components/footer/footer'
+import ContactWeb from './components/contactWeb/contactWeb'
+
 
 const App = () => {
   const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // const [viewMore, setViewMore] = useState(false)
+  const [loading, setLoading] = useState(true);
+  const [viewMore, setViewMore] = useState(false);
+  const [userSearch, setUserSearch] = useState("");
+
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved ? JSON.parse(saved) : false;
+  });
+
 
   // console.log(viewMore)
 
@@ -37,32 +47,38 @@ const App = () => {
 
   return (
     <>
-    <div className='header_name'>
-      <h1>User Profile Directory</h1>
-    </div>
-
-     <div className='card'>
+    <Header
+    darkMode={setDarkMode}
+    setDarkMode={setDarkMode}
+    userSearch={userSearch}
+    setUserSearch={setUserSearch}
+    />
+    
+     <div className='container'>
       {users.map((user) => (
-        <div className='card' key={user.id}>
-          <div className='container'>
+        <div key={user.id}>
+          <div className='card'>
             <img src="/user_icon.png" alt="user_icon" />
             <div>
             <h2>Name:{user.name}</h2>
             <h3>Email: {user.email}</h3>
             <h3>Company: {user.company.name}</h3>
-            <h3>City:{user.address.city}</h3>
+            <h3>City: {user.address.city}</h3>
             </div>
+            
             </div>
-            <div>
+            <div className='button'>
+              <button className='view_more' onClick={() => setViewMore(!viewMore)}> View more</button>
 
             </div>
         </div>
       ))};
     </div>
 
-    {/* {viewMore && <ContactWeb /> } */}
+    {viewMore && <ContactWeb /> }
 
-    {/* <button className='view_more' onClick={() => setViewMore(!viewMore)}> View more</button> */}
+    <Footer 
+      darkMode={darkMode} userSearch={userSearch} />
 
     </>
   )

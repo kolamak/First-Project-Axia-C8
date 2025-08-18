@@ -1,52 +1,28 @@
-.header_name{
-    width: 100%;
-    height: 200px;
-    border: 2px solid #3d3d55;
-    border-radius: 0.5rem;
-    color: #3d3d55;
+.container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-h1{
-    font-size: 5rem;
-    text-align: center;
-    justify-content: center;
-  }
-
-h2{
-    font-size: 1.2rem;
-}
-
-.view_more{
-    width: 300px;
-    height: fit-content;
-    padding: 0.5rem 0.5rem;
-    
-    color: #fff;
-    margin-top: 0.5rem;
-    border-radius: 0.5rem;
-    justify-content: center;
-    background-color: #000;
-}
-
-.card{
-    width: 340px;
-    height: 400px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:1rem;
-    place-items: center;
-    text-align: center;
-    border-radius: 0.5rem;
+.container>div{
+    width: 280px;
+    height: 380px;
     margin: 0.5rem;
+    place-items: center;
+    border-radius: 0.5rem;
     border: 2px solid #3d3d55; 
 }
 
-.container{
+.card{
     display: flex;
     color: #3d3d55;
-    padding: 1rem 1rem;
+    font-size: 1rem;
+    padding: 0.5rem;
     place-items: center;
     flex-direction: column;
+}
+
+h2,h2,h3{
+    font-size: 1rem;
 }
 
 img{
@@ -55,3 +31,17 @@ img{
     color: #3d3d55;
     border-radius: 50%;
 }
+
+.view_more{
+    width: 120px;
+    color: #fff;
+    cursor:pointer ;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    height: fit-content;
+
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #3d3d55;
+}
+
