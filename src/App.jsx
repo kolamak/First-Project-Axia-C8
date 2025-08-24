@@ -68,6 +68,7 @@ const App = () => {
             
             </div>
             <div className='button'>
+              {viewMore && <ContactWeb />}
               <button className='view_more' onClick={() => setViewMore(!viewMore)}> View more</button>
 
             </div>
@@ -75,7 +76,7 @@ const App = () => {
       ))};
     </div>
 
-    {viewMore && <ContactWeb /> }
+    
 
     <Footer 
       darkMode={darkMode} userSearch={userSearch} />
