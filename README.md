@@ -1,4 +1,4 @@
-<!-- *#####################################################################
+#####################################################################
 
 Name: USER-PROFILE-DIRECTORY
 Project: First Project Axia-Afica Cohort-8.
@@ -10,6 +10,6 @@ Last Modified: Sat August 2025.
 Modified By: Kolawole Opemipo Makanjuola.
 
 HISTORY-
-Date:                Comment By:
+Date: Comment By:
 
-*##################################################################### -->
+#####################################################################
